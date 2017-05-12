@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h4>Welcome {{username}}</h4>
+<h5>Here are your blog entries:
+{% for blog in blogs %}
+<div class="row">
+  <div class="col-xs-12">
+    <h5>{{blog.subject}}</h5>
+    <p>{{blog.content}}</p>
+    <p>{{blog.userid.username}}
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

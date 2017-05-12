@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h4>SingIn</h4>
+    <br>
+    <form method="post">
+      <div>
+        <label>Username:
+          <input type="text" name="username" value="{{username}}">
+        </label>
+        <div class="error">{{uname_error}}</div>
+      </div><br>
+      <div>
+        <label>Password:
+          <input type="password" name="password">
+        </label>
+        <div class="error">{{password_error}}</div>
+      </div><br>
+      <div>
+        <label>Verify password:
+          <input type="password" name="verify">
+        </label>
+        <div class="error">{{verify_error}}</div>
+      </div><br>
+      <div>
+        <label>Email (Optional):
+          <input type="text" name="email" value="{{email}}">
+        </label>
+        <div class="error">{{email_error}}</div>
+      </div>
+      <br>
+      <br>
+      <button>Sign in</button>
+      <br>
+    </form>
+{% endblock %}

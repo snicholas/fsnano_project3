@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% if blogs %}
+    {% for entry in blogs %}
+      <article>
+        <h2><a href="/{{entry.key().id()}}">{{entry.subject}}</a></h2>
+        <div class="created">{{entry.created}}</div>
+        <p>{{entry.content}}</p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <h3>Still no entry...</h3>
+  {% endif %}
+{% endblock %}

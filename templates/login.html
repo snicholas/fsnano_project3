@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h4>LogIn</h4>
+    <br>
+    <form method="post">
+      <div>
+        <label>Username:
+          <input type="text" name="username" value="{{username}}">
+        </label>
+      </div>
+      <br>
+      <div>
+        <label>Password:
+          <input type="password" name="password">
+        </label>
+      </div>
+      <br>
+      <div class="error">{{error}}</div>
+      <br>
+      <br>
+      <button>Log in</button>
+      <br>
+    </form>
+{% endblock %}

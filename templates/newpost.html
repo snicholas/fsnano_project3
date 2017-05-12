@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Add new post</h1>
+{% if error %}
+<h3 class="error">{{error}}</h3>
+{% endif %}
+<form method="post">
+  <label>
+    Subject:
+    <input type="text" name="subject" value="{{subject}}">
+  <label>
+  <br>
+  <br>
+  <label>
+    Content:
+    <textarea cols="120" rows="10" name="content">{{content}}</textarea>
+  </label>
+  <br>
+  <br>
+  <button>Add</button>
+</form>
+{% endblock %}

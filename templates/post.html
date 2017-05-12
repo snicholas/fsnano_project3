@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% if blog %}
+    <article>
+      <h2>{{blog.subject}}</h2>
+      <div class="created">{{blog.created}}</div>
+      <p>{{blog.content}}</p>
+    </article>
+    <a href="/">back to home</a>
+  {% endif %}
+{% endblock %}
